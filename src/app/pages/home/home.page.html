@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="logout()">Cerrar sesion</ion-button>
+
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <ion-input label="Nombre" fill="outline" label-placement="floating" placeholder="nomre"
+               formControlName="nombre"></ion-input>
+    <ion-button [disabled]="!profileForm.valid" type="submit">Actualizar perfil</ion-button>
+
+  </form>
+
+</ion-content>

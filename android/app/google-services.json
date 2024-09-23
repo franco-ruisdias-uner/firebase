@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "152304422272",
+    "project_id": "des-mov",
+    "storage_bucket": "des-mov.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152304422272:android:8a116f733bcfa18fd24565",
+        "android_client_info": {
+          "package_name": "uner.firebase.desmov"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQjoEzTF4ZUg7FEzfaFrWBI77ztwHw1fM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

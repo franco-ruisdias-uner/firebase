@@ -1,0 +1,37 @@
+<ion-content class="ion-padding">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-text>
+            <h3>Iniciar Sesion</h3>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input label="Email" fill="outline" label-placement="floating" placeholder="perez@email.com"
+                     formControlName="email"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input type="password" label="Password" label-placement="floating" formControlName="password"
+                     fill="outline">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6">
+          <ion-button [disabled]="!loginForm.valid" type="submit">Iniciar Sesion</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6">
+          <ion-text routerLink="/register" color="secondary">No tengo una cuenta</ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">firebase</string>
+    <string name="title_activity_main">firebase</string>
+    <string name="package_name">uner.firebase.desmov</string>
+    <string name="custom_url_scheme">uner.firebase.desmov</string>
+</resources>
