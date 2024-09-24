@@ -3,17 +3,22 @@
     <ion-title>
       Home
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onLogoutPressed()" color="primary">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-button (click)="logout()">Cerrar sesion</ion-button>
-
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <ion-input label="Nombre" fill="outline" label-placement="floating" placeholder="nomre"
-               formControlName="nombre"></ion-input>
-    <ion-button [disabled]="!profileForm.valid" type="submit">Actualizar perfil</ion-button>
-
-  </form>
-
+  <app-crear-lista-compra-modal [(isOpen)]="modalAbierto" (guardar)="onGuardarPresionado($event)"/>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="abrirCerrarElModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list>
+    <app-list-item *ngFor="let item of items " [item]="item" (deletePressed)="deleteItemPressed($event)" (editPressed)="editItemPressed($event)"></app-list-item>
+  </ion-list>
 </ion-content>

@@ -11,11 +11,11 @@ export class UserService {
   }
 
   async create(user: User): Promise<User> {
-    const userCreated = await FirebaseFirestore.addDocument({
+    await FirebaseFirestore.addDocument({
       reference: 'user',
       data: user
     });
-    console.log(userCreated)
+
     return user;
   }
 

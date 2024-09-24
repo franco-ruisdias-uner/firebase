@@ -1,0 +1,26 @@
+<ion-modal [isOpen]="isOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="cancelar()">Cerrar</ion-button>
+        </ion-buttons>
+        <ion-title>Crear item</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="confirmar()" [disabled]="itemControl.invalid" [strong]="true">Guardar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-item>
+        <ion-input
+          label="Item"
+          labelPlacement="stacked"
+          type="text"
+          placeholder="Your name"
+          [formControl]="itemControl"
+        ></ion-input>
+      </ion-item>
+    </ion-content>
+  </ng-template>
+</ion-modal>
